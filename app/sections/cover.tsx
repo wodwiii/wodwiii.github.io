@@ -14,7 +14,7 @@ export function Cover() {
       <div className="flex flex-col-reverse lg:flex-row lg:justify-between lg:mx-[5vw] xl:mx-[10vw] lg:h-[85vh] py-10">
         <div className="text-center content-center text-2xl text-white lg:text-left xl:text-5xl">
           <BlurFade delay={0.25} inView>
-            <p>Hey there, I'm</p>
+            <p>Hey there, I &apos; m</p>
           </BlurFade>
           <BlurFade delay={0.25 * 2} inView>
             <p className="text-5xl xl:text-7xl font-bold">RODRIGO</p>
