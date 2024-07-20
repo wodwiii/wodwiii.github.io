@@ -25,7 +25,7 @@ export default function Home() {
     },
     {
       name: "Resume",
-      link: "/#resume",
+      link: "/#cv",
       icon: (
         <IconPaperclip className="h-4 w-4 text-white" />
       ),

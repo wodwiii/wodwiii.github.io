@@ -40,8 +40,8 @@ export function BentoGridDemo() {
           ))}
         </div>
         <div className="text-2xl text-[#778899]">
-        <div className="mt-4 font-bold">{item.title}</div>
-        <div className="my-4 text-lg">{item.description}</div>
+          <div className="mt-4 font-bold">{item.title}</div>
+          <div className="my-4 text-lg">{item.description}</div>
         </div>
       </div>
     );
@@ -85,8 +85,14 @@ const Modal = ({
   };
 
   return (
-    <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-30 flex justify-center items-center z-50" onClick={onClose}>
-      <div className="relative bg-white p-6 rounded-lg shadow-lg max-w-[90vw] lg:max-w-[70vw] w-full" onClick={handleContentClick}>
+    <div
+      className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-30 flex justify-center items-center z-50"
+      onClick={onClose}
+    >
+      <div
+        className="relative bg-white p-6 rounded-lg shadow-lg max-w-[90vw] lg:max-w-[70vw] w-full"
+        onClick={handleContentClick}
+      >
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-2xl text-[#778899] hover:text-gray"
@@ -102,7 +108,7 @@ const Modal = ({
 const items = [
   {
     title: "BillSmart",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    description: "An all-in-one billing system for managing electricity and water utilities, simplifying billing processes and improving accuracy.",
     header: (
       <Image
         src={"/smartbill.png"}
@@ -115,7 +121,7 @@ const items = [
   },
   {
     title: "PowerGuard",
-    description: "Dive into the transformative power of technology.",
+    description: "An energy-saving system that automatically turns off outlets and lights at specified times to reduce electricity consumption.",
     header: (
       <Image
         src={"/powerguard.jpg"}
@@ -128,7 +134,7 @@ const items = [
   },
   {
     title: "X1 Capture",
-    description: "Discover the beauty of thoughtful and functional design.",
+    description: "A software for X1 Technologies that monitors and captures activities on virtual machines, enhancing security and insights.",
     header: (
       <Image
         src={"/x1cap.jpg"}
@@ -142,7 +148,7 @@ const items = [
   {
     title: "Clarity",
     description:
-      "Understand the impact of effective communication in our lives.",
+      "An AI-powered IDE extension that helps developers navigate codebases, speed up documentation, and learn coding faster.",
     header: (
       <Image
         src={"/clarity.jpg"}
@@ -155,7 +161,8 @@ const items = [
   },
   {
     title: "Illegal Logging Detection System",
-    description: "Join the quest for understanding and enlightenment.",
+    description:"This system uses TinyML to detect chainsaw sounds on edge devices, sending real-time notifications to combat illegal logging.",
+    expanded:"This system uses TinyML to detect chainsaw sounds on edge devices, sending real-time notifications to combat illegal logging.",
     header: (
       <Image
         src={"/trees.jpg"}
@@ -168,7 +175,7 @@ const items = [
   },
   {
     title: "Trial Balance Generator",
-    description: "Experience the thrill of bringing ideas to life.",
+    description: "A web app that automates ledger creation and trial balance generation, improving accuracy and efficiency for accountants.",
     header: (
       <Image
         src={"/tbl.png"}
@@ -181,7 +188,7 @@ const items = [
   },
   {
     title: "Smart Vendo Fridge",
-    description: "Embark on exciting journeys and thrilling discoveries.",
+    description: "A proof-of-concept system that innovates vending machines with smart technology, optimizing inventory and providing real-time data analytics.",
     header: (
       <Image
         src={"/fridge.jpg"}

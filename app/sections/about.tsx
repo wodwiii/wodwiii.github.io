@@ -18,16 +18,16 @@ export function About() {
         <div className="text-xl text-center text-white lg:text-justify xl:text-2xl lg:max-w-[45vw]">
           <BlurFade delay={0.25} inView>
             <p>
-              Hi I am <span className="font-bold">Rodrigo G. Barien III </span>
+              Hi I&apos;m{" "}
+              <span className="font-bold">Rodrigo G. Barien III </span>
             </p>
           </BlurFade>
           <BlurFade delay={0.25 * 2} inView>
             <p className="">
-              I am software/electronics engineer with a strong background in
-              embedded systems, machine learning and web development. As a
-              current freelancer, I have been working on building for
-              production, prototypes and proof of concepts software and hardware
-              projects for clients.
+              I&apos;m an electronics engineer with a strong background in
+              embedded systems, machine learning and AI, and software
+              development. My passion for technology drives me to continually
+              innovate and stay at the forefront of industry advancements.
             </p>
           </BlurFade>
         </div>
@@ -36,7 +36,7 @@ export function About() {
         My Education & Experience
       </div>
       <div className="flex flex-col justify-center lg:flex-row items-center gap-4 mt-6">
-        <div className="bg-[#778899] w-[400px] h-[300px] rounded-3xl">
+        <div className="bg-[#778899] w-[320px] lg:w-[400px] h-[300px] rounded-3xl">
           <div className="flex flex-row text-2xl items-center mt-4 justify-center font-bold">
             <div className="mr-4">
               <svg
@@ -54,20 +54,30 @@ export function About() {
             Education
           </div>
           <hr className="h-px my-2 bg-white border-0"></hr>
-          <div className="px-4 py-4 text-xl">
-            University of Saint Louis
+          <div className="px-4 py-4 ">
+            <div className="flex flex-row text-xl items-center justify-between">
+              University of Saint Louis
+              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
+                2024
+              </div>
+            </div>
             <div className="text-sm font-normal">
               BS Electronics Engineering
             </div>
           </div>
-          <div className="px-4 py-4 text-xl">
-            Saint Paul University Philippines
+          <div className="px-4 py-4 ">
+            <div className="flex flex-row text-xl items-center justify-between">
+              Saint Paul University Philippines
+              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
+                2020
+              </div>
+            </div>
             <div className="text-sm font-normal">
-              Secondary Education(STEM)
+              Secondary Education (STEM)
             </div>
           </div>
         </div>
-        <div className="bg-[#778899] w-[400px] h-[300px] rounded-3xl ">
+        <div className="bg-[#778899] w-[320px] lg:w-[400px] h-[300px] rounded-3xl ">
           <div className="flex flex-row text-2xl items-center mt-4 justify-center font-bold">
             <div className="mr-4">
               <svg
@@ -85,20 +95,35 @@ export function About() {
             Work Experience
           </div>
           <hr className="h-px my-2 bg-white border-0"></hr>
-          <div className="px-4 py-3 text-xl">
-            Upwork
+          <div className="px-4 py-3 ">
+            <div className="flex flex-row text-xl items-center justify-between">
+              Upwork
+              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
+                Present
+              </div>
+            </div>
             <div className="text-sm font-normal">
               Freelance Developer
             </div>
           </div>
-          <div className="px-4 py-3 text-xl">
-            Globe Telecom Inc.
+          <div className="px-4 py-3 ">
+            <div className="flex flex-row text-xl items-center justify-between">
+              Globe Telecom Inc.
+              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
+                2023
+              </div>
+            </div>
             <div className="text-sm font-normal">
               Emerging Technologies Intern
             </div>
           </div>
-          <div className="px-4 py-3 text-xl">
-            IECEP Cagayan Valley ESC
+          <div className="px-4 py-3 ">
+            <div className="flex flex-row text-xl items-center justify-between">
+              IECEP Cagayan Valley ESC
+              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
+                2024
+              </div>
+            </div>
             <div className="text-sm font-normal">
               Organizational President
             </div>

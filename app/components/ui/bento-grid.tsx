@@ -42,7 +42,7 @@ export const BentoGridItem = ({
       )}
       onClick={onClick}
     >
-        <div className="h-[200px] w-auto relative">
+        <div className=" h-[200px] w-auto relative">
         {header}
         </div>
 
