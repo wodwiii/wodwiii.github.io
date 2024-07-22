@@ -12,7 +12,7 @@ export function About() {
       <div className="flex flex-col items-center lg:flex-row justify-center lg:mx-[5vw] px-6 lg:px-24">
         <BlurFade delay={0.25} inView>
           <div className="justify-center items-center">
-            <Image src={"/logo.png"} alt={""} width={300} height={300} />
+            <Image src={"logo.png"} alt={""} width={300} height={300} />
           </div>
         </BlurFade>
         <div className="text-xl text-center text-white lg:text-justify xl:text-2xl lg:max-w-[45vw]">

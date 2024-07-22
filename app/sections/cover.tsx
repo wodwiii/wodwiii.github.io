@@ -26,7 +26,7 @@ export function Cover() {
         </div>
         <BlurFade delay={0.25} inView>
           <div className="flex justify-center items-center">
-            <Image src={"/portrait.png"} alt={""} width={600} height={600} />
+            <Image src={"portrait.png"} alt={""} width={600} height={600} />
           </div>
         </BlurFade>
       </div>
