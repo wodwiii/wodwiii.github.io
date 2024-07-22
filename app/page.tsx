@@ -56,13 +56,13 @@ export default function Home() {
           <a href="#">
           <div className="flex flex-row underline justify-center items-center gap-x-1">
             <img src="logo.png" className="object-fit h-8 w-8"></img>
-            <div>rod/&gt;</div>
+            <div>wodwiii/&gt;</div>
           </div>
           </a>
 
           <span className="text-sm ">
             © 2024{" "}
-            <a href="https://rgbdev.vercel.app" className="hover:underline">
+            <a href="https://wodwiii.github.io" className="hover:underline">
               rgbdev
             </a>
             . All Rights Reserved.
