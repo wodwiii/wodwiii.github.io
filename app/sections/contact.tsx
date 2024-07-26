@@ -47,7 +47,7 @@ export default function Contact() {
         <div className="flex flex-col space-y-8 mb-8 lg:mb-0 lg:mr-8">
           <div className="flex flex-row items-center gap-2">
             <IconPhoneCall className="h-8 w-8 text-[#3F556F]" />
-            <span>+639569200462</span>
+            <span>+639301977995</span>
           </div>
           <div className="flex flex-row items-center gap-2">
             <IconMail className="h-8 w-8 text-[#3F556F]" />
@@ -59,7 +59,7 @@ export default function Contact() {
               className="flex flex-row items-center gap-2"
             >
               <IconBrandLinkedin className="h-8 w-8 text-[#3F556F]" />
-              <span>Rodrigo Barien</span>
+              <span>Rodrigo Barien III</span>
             </Link>
           </div>
           <div className="flex flex-row items-center gap-2">

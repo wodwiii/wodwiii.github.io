@@ -63,7 +63,7 @@ export default function Home() {
           <span className="text-sm ">
             © 2024{" "}
             <a href="https://wodwiii.github.io" className="hover:underline">
-              rgbdev
+              wodwiii
             </a>
             . All Rights Reserved.
           </span>
