@@ -89,12 +89,12 @@ export function About() {
         <div className="lg:max-w-2xl text-center lg:text-left">
           <BlurFade delay={0.25} inView>
             <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              Hi, I'm Rod!
+              Hi, I&apos;m Rod!
             </h2>
           </BlurFade>
           <BlurFade delay={0.5} inView>
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed px-4 lg:px-0">
-              I'm an electronics engineer with a strong background in embedded
+              I&apos;m an electronics engineer with a strong background in embedded
               systems, machine learning and AI, and software development. My
               passion for technology drives me to continually innovate and stay
               at the forefront of industry advancements.

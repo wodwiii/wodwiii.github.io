@@ -48,7 +48,7 @@ export default function Contact() {
               Contact Me
             </h1>
             <p className="mt-6 text-xl md:text-3xl font-bold">
-              Let's <span className="text-[#3F556F]">Connect</span> and{" "}
+              Let&apos;s <span className="text-[#3F556F]">Connect</span> and{" "}
               <span className="text-[#3F556F]">Collaborate</span>
             </p>
           </div>

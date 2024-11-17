@@ -12,6 +12,7 @@ import { Projects } from "./sections/project";
 import { About } from "./sections/about";
 import { CV } from "./sections/cv";
 import Contact from "./sections/contact";
+import Image from "next/image";
 export default function Home() {
   const navItems = [
     {
@@ -55,7 +56,7 @@ export default function Home() {
         <div className="py-8 text-center text-white">
           <a href="#">
           <div className="flex flex-row underline justify-center items-center gap-x-1">
-            <img src="/logo.png" className="object-fit h-8 w-8"></img>
+            <Image alt="logo" src="/logo.png" className="object-fit h-8 w-8"></Image>
             <div>wodwiii/&gt;</div>
           </div>
           </a>
