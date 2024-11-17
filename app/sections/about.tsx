@@ -1,135 +1,215 @@
+"use client";
 import BlurFade from "../components/magicui/blurfade";
 import Image from "next/image";
+
 export function About() {
   return (
     <section
       id="about"
-      className="relative justify-center items-center text-white bg-[#3F556F] py-12"
+      className="relative min-h-screen bg-[#3F556F] py-16 text-white overflow-hidden"
     >
-      <div className="text-center font-bold text-4xl xl:text-6xl lg:mx-[5vw] xl:mx-[10vw]">
-        About Me
+      {/* New decorative background pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute h-full w-full">
+          {/* Circuit board inspired pattern */}
+          <svg
+            className="absolute w-full h-full"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <pattern
+                id="circuit"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M0 50h25l5-5h20l5 5h45"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1"
+                />
+                <path
+                  d="M0 25h35l5 5h25"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1"
+                />
+                <path
+                  d="M0 75h10l5-5h15l5 5h65"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1"
+                />
+                <circle cx="50" cy="50" r="3" fill="white" />
+                <circle cx="75" cy="25" r="3" fill="white" />
+                <circle cx="25" cy="75" r="3" fill="white" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#circuit)" />
+          </svg>
+          {/* Glowing orbs */}
+          <div className="absolute inset-0">
+            {[...Array(15)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute rounded-full bg-gradient-to-r from-white/20 to-transparent blur-xl"
+                style={{
+                  width: Math.random() * 150 + 50 + "px",
+                  height: Math.random() * 150 + 50 + "px",
+                  left: Math.random() * 100 + "%",
+                  top: Math.random() * 100 + "%",
+                  animation: `float ${
+                    Math.random() * 10 + 20
+                  }s linear infinite`,
+                }}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col items-center lg:flex-row justify-center lg:mx-[5vw] px-6 lg:px-24">
+
+      {/* Profile Section */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-12">
         <BlurFade delay={0.25} inView>
-          <div className="justify-center items-center">
-            <Image src={"logo.png"} alt={""} width={300} height={300} />
+          <div className="relative group">
+            <Image
+              src="/logo.png"
+              alt="Profile"
+              width={300}
+              height={300}
+              className="transform transition-all duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#3F556F]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
         </BlurFade>
-        <div className="text-xl text-center text-white lg:text-justify xl:text-2xl lg:max-w-[45vw]">
+
+        <div className="lg:max-w-2xl text-center lg:text-left">
           <BlurFade delay={0.25} inView>
-            <p>
-              Hi I&apos;m{" "}
-              <span className="font-bold">Rodrigo G. Barien III </span>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              Hi, I'm Rod!
+            </h2>
+          </BlurFade>
+          <BlurFade delay={0.5} inView>
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed px-4 lg:px-0">
+              I'm an electronics engineer with a strong background in embedded
+              systems, machine learning and AI, and software development. My
+              passion for technology drives me to continually innovate and stay
+              at the forefront of industry advancements.
             </p>
           </BlurFade>
-          <BlurFade delay={0.25 * 2} inView>
-            <p className="">
-              I&apos;m an electronics engineer with a strong background in
-              embedded systems, machine learning and AI, and software
-              development. My passion for technology drives me to continually
-              innovate and stay at the forefront of industry advancements.
-            </p>
-          </BlurFade>
         </div>
       </div>
-      <div className="text-center font-bold text-2xl my-6">
-        My Education & Experience
-      </div>
-      <div className="flex flex-col justify-center lg:flex-row items-center gap-4 mt-6">
-        <div className="bg-[#778899] w-[320px] lg:w-[400px] h-[300px] rounded-3xl">
-          <div className="flex flex-row text-2xl items-center mt-4 justify-center font-bold">
-            <div className="mr-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="0.88em"
-                height="1em"
-                viewBox="0 0 448 512"
+
+      {/* Timeline Section */}
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Journey & Experience
+        </h2>
+
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-[#778899] to-[#3F556F]" />
+
+          {/* Timeline items */}
+          {[
+            {
+              year: "Aug - Present",
+              role: "Full Stack + AI Developer",
+              organization: "Jur PH",
+              type: "work",
+            },
+            {
+              year: "Jun 2024",
+              role: "BS Electronics Engineering",
+              organization: "University of Saint Louis",
+              type: "education",
+            },
+            {
+              year: "Mar 2023 - Present",
+              role: "Freelance Developer",
+              organization: "Upwork",
+              type: "work",
+            },
+            {
+              year: "Jun 2023 - May 2024",
+              role: "Organizational President",
+              organization: "IECEP Cagayan Valley ESC",
+              type: "work",
+            },
+            {
+              year: "Jun - Aug 2023",
+              role: "Emerging Technologies Intern",
+              organization: "Globe Telecom Inc.",
+              type: "work",
+            },
+            {
+              year: "Apr 2020",
+              role: "Secondary Education (STEM)",
+              organization: "Saint Paul University Philippines",
+              type: "education",
+            },
+          ].map((item, index) => (
+            <BlurFade key={index} delay={0.25 * (index + 1)} inView>
+              <div
+                className={`relative mb-6 lg:-mb-4 ${
+                  // Normal spacing on mobile, overlap on lg
+                  index % 2 === 0
+                    ? "lg:ml-auto lg:pl-6 lg:pr-0 lg:w-1/2 px-4 text-center lg:text-left"
+                    : "lg:mr-auto lg:pr-6 lg:pl-0 lg:w-1/2 px-4 text-center lg:text-left"
+                }`}
               >
-                <path
-                  fill="white"
-                  d="M219.3.5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9V160c0 70.7-57.3 128-128 128S96 230.7 96 160v-57.1l-48-9.6v65.1l15.7 78.4c.9 4.7-.3 9.6-3.3 13.3S52.8 256 48 256H16c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4V86.6C6.5 83.3 0 74.3 0 64c0-11.4 8.1-21.3 19.3-23.5zM111.9 327.7c10.5-3.4 21.8.4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5c65 20.9 112 81.7 112 153.6c0 17-13.8 30.7-30.7 30.7H30.7C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6"
-                />
-              </svg>
-            </div>
-            Education
-          </div>
-          <hr className="h-px my-2 bg-white border-0"></hr>
-          <div className="px-4 py-4 ">
-            <div className="flex flex-row text-xl items-center justify-between">
-              University of Saint Louis
-              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
-                2024
+                <div className="bg-[#778899] backdrop-blur-sm rounded-lg p-5 lg:p-4 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:z-10 relative">
+                  {/* Circle indicator */}
+                  <div
+                    className={`hidden lg:block absolute top-6 ${
+                      index % 2 === 0
+                        ? "left-1/2 lg:left-0 lg:-translate-x-1/2 -translate-x-1/2"
+                        : "left-1/2 lg:left-auto lg:right-0 lg:translate-x-1/2 -translate-x-1/2"
+                    } w-4 h-4 bg-[#3F556F] rounded-full border-2 border-[#778899]`}
+                  />
+
+                  <div className="flex flex-col lg:flex-row justify-between items-center gap-2 mb-2">
+                    <span className="bg-[#3F556F] px-2 py-0.5 rounded-full text-sm">
+                      {item.year}
+                    </span>
+                    <span
+                      className={`text-xs px-2 py-0.5 rounded-full ${
+                        item.type === "education"
+                          ? "bg-blue-500/20 text-blue-200"
+                          : "bg-green-500/20 text-green-200"
+                      }`}
+                    >
+                      {item.type === "education" ? "Education" : "Experience"}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold mb-1">
+                    {item.organization}
+                  </h3>
+                  <p className="text-gray-200 text-sm">{item.role}</p>
+                </div>
               </div>
-            </div>
-            <div className="text-sm font-normal">
-              BS Electronics Engineering
-            </div>
-          </div>
-          <div className="px-4 py-4 ">
-            <div className="flex flex-row text-xl items-center justify-between">
-              Saint Paul University Philippines
-              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
-                2020
-              </div>
-            </div>
-            <div className="text-sm font-normal">
-              Secondary Education (STEM)
-            </div>
-          </div>
-        </div>
-        <div className="bg-[#778899] w-[320px] lg:w-[400px] h-[300px] rounded-3xl ">
-          <div className="flex flex-row text-2xl items-center mt-4 justify-center font-bold">
-            <div className="mr-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="white"
-                  d="M336 288H176v-32H16v196a12 12 0 0 0 12 12h456a12 12 0 0 0 12-12V256H336Zm160-164a12 12 0 0 0-12-12H384V56a8 8 0 0 0-8-8H136a8 8 0 0 0-8 8v56H28a12 12 0 0 0-12 12v100h480Zm-152-12H168V88h176Z"
-                />
-              </svg>
-            </div>
-            Work Experience
-          </div>
-          <hr className="h-px my-2 bg-white border-0"></hr>
-          <div className="px-4 py-3 ">
-            <div className="flex flex-row text-xl items-center justify-between">
-              Upwork
-              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
-                Present
-              </div>
-            </div>
-            <div className="text-sm font-normal">
-              Freelance Developer
-            </div>
-          </div>
-          <div className="px-4 py-3 ">
-            <div className="flex flex-row text-xl items-center justify-between">
-              Globe Telecom Inc.
-              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
-                2023
-              </div>
-            </div>
-            <div className="text-sm font-normal">
-              Emerging Technologies Intern
-            </div>
-          </div>
-          <div className="px-4 py-3 ">
-            <div className="flex flex-row text-xl items-center justify-between">
-              IECEP Cagayan Valley ESC
-              <div className="bg-[#3F556F] text-white text-xs font-medium px-2.5 py-0.5 rounded">
-                2024
-              </div>
-            </div>
-            <div className="text-sm font-normal">
-              Organizational President
-            </div>
-          </div>
+            </BlurFade>
+          ))}
         </div>
       </div>
+
+      {/* Keeping the existing float animation styles */}
+      <style jsx>{`
+        @keyframes float {
+          0% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(10px, 10px) rotate(5deg);
+          }
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+        }
+      `}</style>
     </section>
   );
 }

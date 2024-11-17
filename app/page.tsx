@@ -55,7 +55,7 @@ export default function Home() {
         <div className="py-8 text-center text-white">
           <a href="#">
           <div className="flex flex-row underline justify-center items-center gap-x-1">
-            <img src="logo.png" className="object-fit h-8 w-8"></img>
+            <img src="/logo.png" className="object-fit h-8 w-8"></img>
             <div>wodwiii/&gt;</div>
           </div>
           </a>
